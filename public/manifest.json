@@ -3,15 +3,15 @@
   "name": "Dance Remote",
   "version": "1.0",
   "description": "Chrome extension to control playback speed, loop segments, and mirror videos on webpages.",
+  "icons": {
+    "16": "./assets/dance_remote-logo-16.png",
+    "32": "./assets/dance_remote-logo-32.png",
+    "48": "./assets/dance_remote-logo-48.png",
+    "128": "./assets/dance_remote-logo-128.png"
+  },
   "permissions": ["activeTab"],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "./assets/dance_remote-logo-16.png",
-      "32": "./assets/dance_remote-logo-32.png",
-      "48": "./assets/dance_remote-logo-48.png",
-      "128": "./assets/dance_remote-logo-128.png"
-    }
+    "default_popup": "popup.html"
   },
   "background": {
     "service_worker": "background.js"
