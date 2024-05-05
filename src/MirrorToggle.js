@@ -2,17 +2,22 @@
 import React from 'react';
 
 const MirrorToggle = ({ isMirrored, onToggleMirror }) => {
-   // Function to send a message to the content script
-   const toggleMirror = () => {
+  const toggleMirror = () => {
     // Query the active tab to ensure we are sending the message to the correct place
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      chrome.tabs.sendMessage(tabs[0].id, {action: 'toggleMirror'});
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+        chrome.tabs.sendMessage(tabs[0].id, {action: 'toggleMirror'}, (response) => {
+            if (chrome.runtime.lastError) {
+                console.error("Error sending message:", chrome.runtime.lastError);
+            } else {
+                console.log("Response:", response.status);
+            }
+        });
     });
-  };
+};
 
-  return (
+return (
     <button onClick={toggleMirror}>Toggle Mirror</button>
-  );
+);
 };
 
 export default MirrorToggle;
