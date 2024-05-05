@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Dance Remote",
+  "version": "1.0",
+  "description": "Chrome extension to control playback speed, loop segments, and mirror videos on webpages.",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo192.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["static/js/*.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
