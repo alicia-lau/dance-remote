@@ -6,7 +6,12 @@
   "permissions": ["activeTab"],
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "logo192.png"
+    "default_icon": {
+      "16": "./assets/dance_remote-logo-16.png",
+      "32": "./assets/dance_remote-logo-32.png",
+      "48": "./assets/dance_remote-logo-48.png",
+      "128": "./assets/dance_remote-logo-128.png"
+    }
   },
   "background": {
     "service_worker": "background.js"
