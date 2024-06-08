@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Video Mirror",
+  "version": "1.0",
+  "description": "Mirrors the YouTube video when the button is clicked.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/dance_remote-logo-16.png",
+      "48": "assets/dance_remote-logo-48.png",
+      "128": "assets/dance_remote-logo-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
