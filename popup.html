@@ -5,8 +5,50 @@
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">Mirror Video</h1>
-  <button id="mirrorButton" class="bg-blue-500 text-white p-2 rounded">Mirror Video</button>
+
+  <img id="logo" src="assets/dance_remote-logo-text-red.png" alt="Dance Remote Logo">
+
+  <div id="mirror-container" class="container">
+
+    <div id="mirror-icon-container" class="icon-container">
+      <img class="icon" src="assets/icons/mirror-icon.png" alt="Mirror Icon" title="Mirror">
+    </div>
+
+    <label class="switch">
+      <input type="checkbox" id="mirrorButton">
+      <span class="slider round"></span>
+    </label>
+
+  </div>
+
+  <div id="speed-contianer" class="container">
+
+    <div class="icon-container">
+      <img class="icon" src="assets/icons/speed-icon.png" alt="Speed Icon">
+    </div>
+
+    <input type="range" id="speed" name="speed" min="0" max="2">
+
+  </div>
+
+  <div id="loop-container" class="container">
+
+    <div class="icon-container">
+      <img class="icon" src="assets/icons/loop-icon.png" alt="Loop Icon">
+    </div>
+
+    <div id="loop-input-container">
+      <input type="text" name="loop-start" placeholder="00:00" class="loop-input">
+      <input type="text" name="loop-end" placeholder="00:00" class="loop-input">
+    </div>
+
+    
+
+  </div>
+
+
+
+
   <script src="popup.js"></script>
 </body>
 </html>
